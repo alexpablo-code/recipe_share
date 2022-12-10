@@ -160,7 +160,7 @@ class Recipe:
             flash("name is required", "recipe")
             is_valid = False
 
-        elif recipe_data['name'] < 3:
+        elif len(recipe_data['name']) < 3:
             flash("name must be at least 3 characters long.", "recipe")
             is_valid = False
 
@@ -168,7 +168,7 @@ class Recipe:
             flash("Description must not be blank.", "recipe")
             is_valid = False
 
-        elif recipe_data['description'] < 3:
+        elif len(recipe_data['description']) < 3:
             flash("Description must be at least 3 characters long.", "recipe")
             is_valid = False
 
@@ -176,7 +176,7 @@ class Recipe:
             flash("Instructions must not be blank", "recipe")
             is_valid = False
 
-        elif recipe_data['intructions'] < 3:
+        elif len(recipe_data['intructions']) < 3:
             flash("instructions must be at least 3 characters long.", "recipe")
             is_valid = False
 
