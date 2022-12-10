@@ -1,6 +1,6 @@
-import logging
 from flask import Flask
 app = Flask(__name__)
+import logging
 
 app.secret_key = "secret recipes"
 

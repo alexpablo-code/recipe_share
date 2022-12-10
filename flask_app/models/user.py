@@ -90,8 +90,8 @@ class User:
             flash("Invalid email address", "register")
             is_valid = False
 
-        elif not user:
-            flash("User already exits")
+        elif user:
+            flash("User already exits", "register")
             is_valid = False
 
         if len(user_data['password']) < 8 or len(user_data['confirm_password']) < 8:
